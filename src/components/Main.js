@@ -1,8 +1,11 @@
 import React from 'react';
+import Gameboard from './Gameboard';
 
 const Main = () => {
   return (
-    <main>Main</main>
+    <main>
+      <Gameboard />
+    </main>
   );
 }
 
