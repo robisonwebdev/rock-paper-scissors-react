@@ -1,0 +1,10 @@
+.gameboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    border: 1px solid black;
+    height: 60vh;
+    width: 50vw;
+}
