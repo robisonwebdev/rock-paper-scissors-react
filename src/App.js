@@ -6,6 +6,7 @@ import './styles/App.css';
 
 const App = () => {
   const [playerName, setPlayerName] = useState('');
+  const [playerScore, setPlayerScore] = useState('');
 
   return (
     <div className='app'>
