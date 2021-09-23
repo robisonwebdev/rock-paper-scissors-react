@@ -5,8 +5,9 @@ import Footer from './components/Footer';
 import './styles/App.css';
 
 const App = () => {
+  const [computerScore, setComputerScore] = useState(0);
   const [playerName, setPlayerName] = useState('');
-  const [playerScore, setPlayerScore] = useState('');
+  const [playerScore, setPlayerScore] = useState(0);
 
   return (
     <div className='app'>
