@@ -11,7 +11,10 @@ const App = () => {
 
   return (
     <div className='app'>
-      <Header />
+      <Header
+        computerScore={computerScore}
+        playerScore={playerScore}
+      />
       <Main />
       <Footer />
     </div>
