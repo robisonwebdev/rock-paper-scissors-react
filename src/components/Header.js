@@ -1,10 +1,13 @@
 import React from 'react';
 import Scoreboard from './Scoreboard';
 
-const Header = () => {
+const Header = ({ computerScore, playerScore }) => {
   return (
     <header>
-      <Scoreboard />
+      <Scoreboard
+        computerScore={computerScore}
+        playerScore={playerScore}
+      />
     </header>
   );
 }
