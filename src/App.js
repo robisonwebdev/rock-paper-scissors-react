@@ -16,7 +16,11 @@ const App = () => {
         playerScore={playerScore}
       />
       <Main />
-      <Footer />
+      <Footer
+        address='https://github.com/robisonwebdev'
+        name='David Robison'
+        text='Developed by '
+      />
     </div>
   );
 }
