@@ -1,0 +1,8 @@
+footer small {
+    color: var(--redLight);
+    font-size: 14px;
+}
+
+footer a {
+    color: var(--redLight);
+}
