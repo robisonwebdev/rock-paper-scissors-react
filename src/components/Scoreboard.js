@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Scoreboard = () => {
+const Scoreboard = ({ playerScore, computerScore}) => {
   return (
-    <div>Scoreboard</div>
+    <div className='scoreboard'>
+      <p>{playerScore}</p>
+      <p>|</p>
+      <p>{computerScore}</p>
+    </div>
   );
 }
 
