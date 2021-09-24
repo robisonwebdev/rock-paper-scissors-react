@@ -5,14 +5,15 @@
 }
 
 :root {
-    --white: #eae7dc;
+    --tan: #eae7dc;
     --gray: #8e8d8a;
-    --tan: #d8c3a5;
     --red: #e85a4f;
     --redLight: #e98074;
 }
 
 body {
+    background-color: var(--tan);
+    color: var(--red);
     font-family: 'Sriracha', cursive;
     height: 100vh;
     width: 100vw;
