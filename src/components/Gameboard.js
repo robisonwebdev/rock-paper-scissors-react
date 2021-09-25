@@ -1,13 +1,13 @@
 import React from 'react';
-import Display from './Display';
+import GameInterface from './GameInterface';
 import '../styles/Gameboard.css';
 
 const Gameboard = () => {
   return (
     <div className='gameboard'>
-      <Display />
+      <GameInterface />
       <p>Temp</p>
-      <Display />
+      <GameInterface />
     </div>
   );
 }
