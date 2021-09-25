@@ -2,3 +2,9 @@
     color: var(--redLight);
     font-size: 135px;
 }
+
+.Player .la-hand-rock,
+.Player .la-hand-paper,
+.Computer .la-hand-scissors {
+    transform: scaleX(-1);
+}
