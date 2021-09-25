@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/GamePiece.css';
 
 const GamePiece = ({ icon }) => {
     return (
