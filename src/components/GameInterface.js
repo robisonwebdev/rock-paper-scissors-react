@@ -1,8 +1,10 @@
 import React from 'react';
 
-const GameInterface = () => {
+const GameInterface = ({ competitor }) => {
   return (
-    <div>GameInterface</div>
+    <div className='gameInterface'>
+      <h2>{competitor}</h2>
+    </div>
   );
 }
 
