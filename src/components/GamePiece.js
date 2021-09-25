@@ -1,8 +1,8 @@
 import React from 'react';
 
-const GamePiece = () => {
+const GamePiece = ({ icon }) => {
     return (
-        <div>GamePiece</div>
+        <i className={`gamePiece ${icon}`}></i>
     );
 }
 
