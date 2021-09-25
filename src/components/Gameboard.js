@@ -5,9 +5,9 @@ import '../styles/Gameboard.css';
 const Gameboard = () => {
   return (
     <div className='gameboard'>
-      <GameInterface />
+      <GameInterface competitor='Player' />
       <p>Temp</p>
-      <GameInterface />
+      <GameInterface competitor='Computer' />
     </div>
   );
 }
