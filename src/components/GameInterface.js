@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Display = () => {
+const GameInterface = () => {
   return (
-    <div>Display</div>
+    <div>GameInterface</div>
   );
 }
 
-export default Display;
+export default GameInterface;
