@@ -1,5 +1,6 @@
 import React from 'react';
 import GamePiece from './GamePiece';
+import '../styles/GameInterface.css';
 
 const GameInterface = ({ competitor }) => {
   return (
