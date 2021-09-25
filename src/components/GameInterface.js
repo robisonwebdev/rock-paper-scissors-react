@@ -4,7 +4,7 @@ import '../styles/GameInterface.css';
 
 const GameInterface = ({ competitor }) => {
   return (
-    <div className='gameInterface'>
+    <div className={`gameInterface ${competitor}`}>
       <h2>{competitor}</h2>
       <GamePiece icon='las la-hand-rock' />
       <GamePiece icon='las la-hand-paper' />
