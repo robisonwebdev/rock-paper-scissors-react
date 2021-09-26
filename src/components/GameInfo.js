@@ -1,5 +1,6 @@
 import React from 'react';
 import GameForm from './GameForm';
+import '../styles/GameInfo.css';
 
 const GameInfo = () => {
     return (
