@@ -3,7 +3,7 @@ import '../styles/GameStatus.css';
 
 const GameStatus = () => {
     return (
-        <div>GameStatus</div>
+        <div className='gameStatus'>GameStatus</div>
     );
 }
 
