@@ -1,8 +1,11 @@
 import React from 'react';
+import GameForm from './GameForm';
 
 const GameInfo = () => {
     return (
-        <div>GameInfo</div>
+        <div className='gameInfo'>
+            <GameForm />
+        </div>
     );
 }
 
