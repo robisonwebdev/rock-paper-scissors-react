@@ -6,7 +6,7 @@ const GameForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='gameForm' onSubmit={handleSubmit}>
             <input type='text' name='name' placeholder='Enter your name' />
             <input type='submit' value='Submit' />
         </form>
