@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CenterDisplay = () => {
+const GameInfo = () => {
     return (
-        <div>CenterDisplay</div>
+        <div>GameInfo</div>
     );
 }
 
-export default CenterDisplay;
+export default GameInfo;
