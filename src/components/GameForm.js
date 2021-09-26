@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/GameForm.css';
 
 const GameForm = () => {
     const handleSubmit = (event) => {
