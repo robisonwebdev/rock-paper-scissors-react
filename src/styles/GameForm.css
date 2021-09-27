@@ -10,5 +10,15 @@
 }
 
 .gameForm input[type="text"] {
+    background-color: var(--tan);
+    border: 2px solid var(--gray);
+    border-radius: 6px;
+    color: var(--red);
+    font-family: 'Sriracha', cursive;
+    font-size: 16px;
+    height: 35px;
+    outline: none;
+    padding: 2px 10px;
     text-align: center;
+    width: auto;
 }
