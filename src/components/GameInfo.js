@@ -5,6 +5,7 @@ import '../styles/GameInfo.css';
 
 const GameInfo = () => {
     const [showGameForm, setShowGameForm] = useState(true);
+    const [showGameStatus, setShowGameStatus] = useState(false);
 
     return (
         <div className='gameInfo'>
