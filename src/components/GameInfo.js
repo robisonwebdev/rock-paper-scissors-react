@@ -9,8 +9,8 @@ const GameInfo = () => {
 
     return (
         <div className='gameInfo'>
-            <GameForm />
-            <GameStatus />
+            {showGameForm ? <GameForm /> : null}
+            {showGameStatus ? <GameStatus /> : null}
         </div>
     );
 }
