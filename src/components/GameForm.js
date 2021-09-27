@@ -10,7 +10,7 @@ const GameForm = () => {
     return (
         <form className='gameForm' onSubmit={handleSubmit}>
             <input type='text' name='name' placeholder='Enter your name' />
-            <Button />
+            <Button text='Start Game!' />
         </form>
     );
 }
