@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <main>
       <Gameboard />
-      {showResetBtn ? <Button /> : null}
+      {showResetBtn ? <Button text='Reset Game' /> : null}
     </main>
   );
 }
