@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
 import '../styles/GameForm.css';
 
 const GameForm = () => {
+    const [value, setValue] = useState('');
+
     const handleSubmit = (event) => {
         event.preventDefault();
     }
