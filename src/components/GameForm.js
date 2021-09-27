@@ -5,13 +5,17 @@ import '../styles/GameForm.css';
 const GameForm = () => {
     const [value, setValue] = useState('');
 
+    const handleChange = (event) => {
+        setValue(event.target.value);
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
     }
 
     return (
         <form className='gameForm' onSubmit={handleSubmit}>
-            <input type='text' name='name' placeholder='Enter your name' />
+            <input type='text' name='name' onChange={handleChange} placeholder='Enter your name' value={value} />
             <Button text='Start Game!' />
         </form>
     );
