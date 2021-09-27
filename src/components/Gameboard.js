@@ -3,11 +3,13 @@ import GameInterface from './GameInterface';
 import GameInfo from './GameInfo';
 import '../styles/Gameboard.css';
 
-const Gameboard = () => {
+const Gameboard = ({ setPlayerName }) => {
   return (
     <div className='gameboard'>
       <GameInterface competitor='Player' />
-      <GameInfo />
+      <GameInfo
+        setPlayerName={setPlayerName}
+      />
       <GameInterface competitor='Computer' />
     </div>
   );
