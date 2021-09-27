@@ -15,7 +15,9 @@ const App = () => {
         computerScore={computerScore}
         playerScore={playerScore}
       />
-      <Main />
+      <Main
+        setPlayerName={setPlayerName}
+      />
       <Footer
         address='https://github.com/robisonwebdev'
         name='David Robison'
