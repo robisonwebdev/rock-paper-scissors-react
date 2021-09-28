@@ -16,6 +16,7 @@ const App = () => {
         playerScore={playerScore}
       />
       <Main
+        playerName={playerName}
         setPlayerName={setPlayerName}
       />
       <Footer
