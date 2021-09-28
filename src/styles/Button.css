@@ -1,6 +1,7 @@
 button {
     background-color: var(--white);
     color: var(--redLight);
+    cursor: pointer;
     border: none;
     font-family: 'Sriracha', cursive;
     font-size: 26px;
