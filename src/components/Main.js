@@ -8,10 +8,18 @@ const Main = ({ setPlayerName }) => {
   const [showGameForm, setShowGameForm] = useState(true);
   const [showGameStatus, setShowGameStatus] = useState(false);
 
+  const handleReset = () => {
+    setPlayerName('');
+    setShowGameForm(true);
+    setShowGameStatus(false);
+    setShowResetBtn(false);
+  }
+
   return (
     <main>
       <Gameboard
         setPlayerName={setPlayerName}
+        setShowResetBtn={setShowResetBtn}
         setShowGameForm={setShowGameForm}
         setShowGameStatus={setShowGameStatus}
         showGameForm={showGameForm}
