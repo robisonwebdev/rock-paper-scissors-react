@@ -12,8 +12,10 @@ const GameForm = ({ setPlayerName }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        setPlayerName(value);
-        setValue('');
+        if (value !== '') {
+            setPlayerName(value);
+            setValue('');
+        }
     }
 
     return (
