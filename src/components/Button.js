@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/Button.css';
 
-const Button = ({ text }) => {
+const Button = ({ text, type }) => {
   return (
-    <button>{text}</button>
+    <button type={type}>{text}</button>
   );
 }
 
