@@ -3,10 +3,13 @@ import GameInterface from './GameInterface';
 import GameInfo from './GameInfo';
 import '../styles/Gameboard.css';
 
-const Gameboard = ({ setPlayerName, setShowResetBtn, setShowGameForm, setShowGameStatus, showGameForm, showGameStatus }) => {
+const Gameboard = ({ playerName, setPlayerName, setShowResetBtn, setShowGameForm, setShowGameStatus, showGameForm, showGameStatus }) => {
   return (
     <div className='gameboard'>
-      <GameInterface competitor='Player' />
+      <GameInterface
+        className='Player'
+        competitor={playerName}
+      />
       <GameInfo
         setPlayerName={setPlayerName}
         setShowResetBtn={setShowResetBtn}
@@ -15,7 +18,10 @@ const Gameboard = ({ setPlayerName, setShowResetBtn, setShowGameForm, setShowGam
         showGameForm={showGameForm}
         showGameStatus={showGameStatus}
       />
-      <GameInterface competitor='Computer' />
+      <GameInterface
+        className='Computer'
+        competitor='Computer'
+      />
     </div>
   );
 }
