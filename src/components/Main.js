@@ -3,7 +3,7 @@ import Gameboard from './Gameboard';
 import Button from './Button';
 import '../styles/Main.css';
 
-const Main = ({ setPlayerName }) => {
+const Main = ({ playerName, setPlayerName }) => {
   const [showResetBtn, setShowResetBtn] = useState(false);
   const [showGameForm, setShowGameForm] = useState(true);
   const [showGameStatus, setShowGameStatus] = useState(false);
@@ -18,6 +18,7 @@ const Main = ({ setPlayerName }) => {
   return (
     <main>
       <Gameboard
+        playerName={playerName}
         setPlayerName={setPlayerName}
         setShowResetBtn={setShowResetBtn}
         setShowGameForm={setShowGameForm}
