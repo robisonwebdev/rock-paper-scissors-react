@@ -5,3 +5,9 @@ button {
     font-family: 'Sriracha', cursive;
     font-size: 26px;
 }
+
+.submitBtn:hover {
+    color: var(--red);
+    font-size: 30px;
+    margin: -4px;
+}
