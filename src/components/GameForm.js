@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from './Button';
 import '../styles/GameForm.css';
 
-const GameForm = ({ setPlayerName }) => {
+const GameForm = ({ setPlayerName, setShowGameForm, setShowGameStatus }) => {
     const [value, setValue] = useState('');
 
     const handleChange = (event) => {
@@ -14,6 +14,8 @@ const GameForm = ({ setPlayerName }) => {
 
         if (value !== '') {
             setPlayerName(value);
+            setShowGameForm(false);
+            setShowGameStatus(true);
             setValue('');
         }
     }
