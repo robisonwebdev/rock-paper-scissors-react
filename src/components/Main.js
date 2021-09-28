@@ -25,7 +25,13 @@ const Main = ({ setPlayerName }) => {
         showGameForm={showGameForm}
         showGameStatus={showGameStatus}
       />
-      {showResetBtn ? <Button text='Reset Game' /> : null}
+      {showResetBtn
+        ? <Button
+            onClick={handleReset}
+            text='Reset Game'
+          />
+        : null
+      }
     </main>
   );
 }
