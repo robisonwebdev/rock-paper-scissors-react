@@ -3,10 +3,7 @@ import GameForm from './GameForm';
 import GameStatus from './GameStatus';
 import '../styles/GameInfo.css';
 
-const GameInfo = ({ setPlayerName }) => {
-    const [showGameForm, setShowGameForm] = useState(true);
-    const [showGameStatus, setShowGameStatus] = useState(false);
-
+const GameInfo = ({ setPlayerName, setShowGameForm, setShowGameStatus, showGameForm, showGameStatus }) => {
     return (
         <div className='gameInfo'>
             {showGameForm
