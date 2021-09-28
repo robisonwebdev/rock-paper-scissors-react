@@ -19,7 +19,7 @@ const GameForm = ({ setPlayerName }) => {
     return (
         <form className='gameForm' onSubmit={handleSubmit}>
             <input type='text' name='name' onChange={handleChange} placeholder='Enter your name' value={value} />
-            <Button text='Start Game!' />
+            <Button type='submit' text='Start Game!' />
         </form>
     );
 }
