@@ -2,10 +2,10 @@ import React from 'react';
 import GamePiece from './GamePiece';
 import '../styles/GameInterface.css';
 
-const GameInterface = ({ competitor }) => {
+const GameInterface = ({ className, competitor }) => {
   return (
-    <div className={`gameInterface ${competitor}`}>
-      <h2>{competitor}</h2>
+    <div className={`gameInterface ${className}`}>
+      <h2>{competitor || className}</h2>
       <GamePiece icon='las la-hand-rock' />
       <GamePiece icon='las la-hand-paper' />
       <GamePiece icon='las la-hand-scissors' />
