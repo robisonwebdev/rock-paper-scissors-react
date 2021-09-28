@@ -3,12 +3,13 @@ import GameForm from './GameForm';
 import GameStatus from './GameStatus';
 import '../styles/GameInfo.css';
 
-const GameInfo = ({ setPlayerName, setShowGameForm, setShowGameStatus, showGameForm, showGameStatus }) => {
+const GameInfo = ({ setPlayerName, setShowResetBtn, setShowGameForm, setShowGameStatus, showGameForm, showGameStatus }) => {
     return (
         <div className='gameInfo'>
             {showGameForm
                 ?   <GameForm
                         setPlayerName={setPlayerName}
+                        setShowResetBtn={setShowResetBtn}
                         setShowGameForm={setShowGameForm}
                         setShowGameStatus={setShowGameStatus}
                     />
