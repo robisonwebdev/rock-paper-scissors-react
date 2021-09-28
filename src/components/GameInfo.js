@@ -9,7 +9,14 @@ const GameInfo = ({ setPlayerName }) => {
 
     return (
         <div className='gameInfo'>
-            {showGameForm ? <GameForm setPlayerName={setPlayerName} /> : null}
+            {showGameForm
+                ?   <GameForm
+                        setPlayerName={setPlayerName}
+                        setShowGameForm={setShowGameForm}
+                        setShowGameStatus={setShowGameStatus}
+                    />
+                :   null
+            }
             {showGameStatus ? <GameStatus /> : null}
         </div>
     );
