@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/GameStatus.css';
 
-const GameStatus = () => {
+const GameStatus = ({ message }) => {
     return (
-        <div className='gameStatus'>GameStatus</div>
+        <div className='gameStatus'>{message}</div>
     );
 }
 
