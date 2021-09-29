@@ -9,6 +9,10 @@ const Main = ({ playerName, setPlayerName }) => {
   const [showGameForm, setShowGameForm] = useState(true);
   const [showGameStatus, setShowGameStatus] = useState(false);
 
+  const gamePieceClick = () => {
+    console.log('Clicked');
+  }
+
   const handleReset = () => {
     setPlayerName('');
     setShowGameForm(true);
@@ -19,6 +23,7 @@ const Main = ({ playerName, setPlayerName }) => {
   return (
     <main>
       <Gameboard
+        gamePieceClick={gamePieceClick}
         message={message}
         playerName={playerName}
         setPlayerName={setPlayerName}
