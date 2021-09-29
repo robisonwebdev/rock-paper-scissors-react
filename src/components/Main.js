@@ -5,15 +5,14 @@ import '../styles/Main.css';
 
 const Main = ({ playerName, setPlayerName }) => {
   const [gameStart, setGameStart] = useState(false);
+  const [inputValue, setInputValue] = useState('');
   const [message, setMessage] = useState('Select Rock, Paper, or Scissors');
   const [showResetBtn, setShowResetBtn] = useState(false);
   const [showGameForm, setShowGameForm] = useState(true);
   const [showGameStatus, setShowGameStatus] = useState(false);
 
-  const gamePieceClick = () => {
-    if (gameStart) {
-      console.log('Clicked');
-    }
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
   }
 
   const handleReset = () => {
@@ -23,18 +22,35 @@ const Main = ({ playerName, setPlayerName }) => {
     setShowResetBtn(false);
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (inputValue !== '') {
+        setPlayerName(inputValue);
+        setShowResetBtn(true);
+        setShowGameForm(false);
+        setShowGameStatus(true);
+        setInputValue('');
+    }
+  }
+
+  const gamePieceClick = () => {
+    if (gameStart) {
+      console.log('Clicked');
+    }
+  }
+
   return (
     <main>
       <Gameboard
         gamePieceClick={gamePieceClick}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        inputValue={inputValue}
         message={message}
         playerName={playerName}
-        setPlayerName={setPlayerName}
-        setShowResetBtn={setShowResetBtn}
-        setShowGameForm={setShowGameForm}
         setShowGameStatus={setShowGameStatus}
         showGameForm={showGameForm}
-        showGameStatus={showGameStatus}
       />
       {showResetBtn
         ? <Button

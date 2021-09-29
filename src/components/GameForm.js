@@ -1,29 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from './Button';
 import '../styles/GameForm.css';
 
-const GameForm = ({ setPlayerName, setShowResetBtn, setShowGameForm, setShowGameStatus }) => {
-    const [value, setValue] = useState('');
-
-    const handleChange = (event) => {
-        setValue(event.target.value);
-    }
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-
-        if (value !== '') {
-            setPlayerName(value);
-            setShowResetBtn(true);
-            setShowGameForm(false);
-            setShowGameStatus(true);
-            setValue('');
-        }
-    }
-
+const GameForm = ({ handleChange, handleSubmit, inputValue }) => {
     return (
         <form className='gameForm' onSubmit={handleSubmit}>
-            <input type='text' name='name' onChange={handleChange} placeholder='Enter your name' value={value} />
+            <input type='text' name='name' onChange={handleChange} placeholder='Enter your name' value={inputValue} />
             <Button className='submitBtn' type='submit' text='Start Game!' />
         </form>
     );

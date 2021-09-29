@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GameForm from './GameForm';
 import GameStatus from './GameStatus';
 import '../styles/GameInfo.css';
 
-const GameInfo = ({ message, setPlayerName, setShowResetBtn, setShowGameForm, setShowGameStatus, showGameForm, showGameStatus }) => {
+const GameInfo = ({ handleChange, handleSubmit, inputValue, message, showGameForm, showGameStatus }) => {
     return (
         <div className='gameInfo'>
             {showGameForm
                 ?   <GameForm
-                        setPlayerName={setPlayerName}
-                        setShowResetBtn={setShowResetBtn}
-                        setShowGameForm={setShowGameForm}
-                        setShowGameStatus={setShowGameStatus}
+                        handleChange={handleChange}
+                        handleSubmit={handleSubmit}
+                        inputValue={inputValue}
                     />
                 :   null
             }
