@@ -3,7 +3,7 @@ import GameInterface from './GameInterface';
 import GameInfo from './GameInfo';
 import '../styles/Gameboard.css';
 
-const Gameboard = ({ playerName, setPlayerName, setShowResetBtn, setShowGameForm, setShowGameStatus, showGameForm, showGameStatus }) => {
+const Gameboard = ({ message, playerName, setPlayerName, setShowResetBtn, setShowGameForm, setShowGameStatus, showGameForm, showGameStatus }) => {
   return (
     <div className='gameboard'>
       <GameInterface
@@ -11,6 +11,7 @@ const Gameboard = ({ playerName, setPlayerName, setShowResetBtn, setShowGameForm
         competitor={playerName}
       />
       <GameInfo
+        message={message}
         setPlayerName={setPlayerName}
         setShowResetBtn={setShowResetBtn}
         setShowGameForm={setShowGameForm}
