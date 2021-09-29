@@ -19,6 +19,7 @@ const Main = ({ playerName, setPlayerName }) => {
   return (
     <main>
       <Gameboard
+        message={message}
         playerName={playerName}
         setPlayerName={setPlayerName}
         setShowResetBtn={setShowResetBtn}
