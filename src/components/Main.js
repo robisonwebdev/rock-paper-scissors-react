@@ -4,6 +4,7 @@ import Button from './Button';
 import '../styles/Main.css';
 
 const Main = ({ playerName, setPlayerName }) => {
+  const [message, setMessage] = useState('Select Rock, Paper, or Scissors');
   const [showResetBtn, setShowResetBtn] = useState(false);
   const [showGameForm, setShowGameForm] = useState(true);
   const [showGameStatus, setShowGameStatus] = useState(false);
