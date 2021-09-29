@@ -49,7 +49,7 @@ const Main = ({ playerName, setPlayerName }) => {
         inputValue={inputValue}
         message={message}
         playerName={playerName}
-        setShowGameStatus={setShowGameStatus}
+        showGameStatus={showGameStatus}
         showGameForm={showGameForm}
       />
       {showResetBtn
