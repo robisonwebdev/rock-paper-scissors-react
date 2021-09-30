@@ -1,9 +1,14 @@
 import React from 'react';
 import '../styles/GamePiece.css';
 
-const GamePiece = ({ icon, onClick }) => {
+const GamePiece = ({ data_value, icon, onClick }) => {
     return (
-        <i className={`gamePiece ${icon}`} onClick={onClick}></i>
+        <i
+            className={`gamePiece ${icon}`}
+            data_value={data_value}
+            onClick={onClick}
+        >
+        </i>
     );
 }
 
