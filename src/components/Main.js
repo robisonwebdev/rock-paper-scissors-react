@@ -4,12 +4,45 @@ import Button from './Button';
 import '../styles/Main.css';
 
 const Main = ({ playerName, setPlayerName }) => {
-  const [gameStart, setGameStart] = useState(false);
+  const [gameStart, setGameStart] = useState(true);
   const [inputValue, setInputValue] = useState('');
   const [message, setMessage] = useState('Select Rock, Paper, or Scissors');
   const [showResetBtn, setShowResetBtn] = useState(false);
   const [showGameForm, setShowGameForm] = useState(true);
   const [showGameStatus, setShowGameStatus] = useState(false);
+
+  const gameLogic = (player, computer) => {
+    if (player === computer) {
+      // Return tie
+    } 
+
+    // Rock
+    if (player === 'rock') {
+      if (computer === 'scissors') {
+        // return player wins
+      } else if (computer === 'paper') {
+        // return computer wins
+      }
+    }
+
+    // Paper
+    if (player === 'paper') {
+      if (computer === 'rock') {
+        // return player wins
+      } else if (computer === 'scissors') {
+        // return computer wins
+      }
+    }
+
+    // Scissors
+    if (player === 'scissors') {
+      if (computer === 'paper') {
+        // return player wins
+      } else if (computer === 'rock') {
+        // return computer wins
+      }
+    }
+  }
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -34,7 +67,7 @@ const Main = ({ playerName, setPlayerName }) => {
     }
   }
 
-  const gamePieceClick = () => {
+  const gamePieceClick = (event) => {
     if (gameStart) {
       console.log('Clicked');
     }
