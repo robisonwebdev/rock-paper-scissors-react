@@ -4,12 +4,30 @@ import Button from './Button';
 import '../styles/Main.css';
 
 const Main = ({ playerName, setPlayerName }) => {
+  const [computerPick, setComputerPick] = useState(null);
   const [gameStart, setGameStart] = useState(true);
   const [inputValue, setInputValue] = useState('');
   const [message, setMessage] = useState('Select Rock, Paper, or Scissors');
+  const [playerPick, setPlayerPick] = useState(null);
   const [showResetBtn, setShowResetBtn] = useState(false);
   const [showGameForm, setShowGameForm] = useState(true);
   const [showGameStatus, setShowGameStatus] = useState(false);
+
+  const getComputersPick = () => {
+    const randomNumber = Math.floor(Math.random() * 3);
+
+    switch (randomNumber) {
+      case 0:
+        setComputerPick('rock');
+        break;
+      case 1:
+        setComputerPick('paper');
+        break;
+      case 2:
+        setComputerPick('scissors');
+        break;
+    }
+  }
 
   const gameLogic = (player, computer) => {
     if (player === computer) {
@@ -69,7 +87,7 @@ const Main = ({ playerName, setPlayerName }) => {
 
   const gamePieceClick = (event) => {
     if (gameStart) {
-      console.log('Clicked');
+      console.log(event.target.getAttribute('data_value'));
     }
   }
 
