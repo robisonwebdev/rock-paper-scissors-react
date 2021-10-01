@@ -5,6 +5,7 @@ import '../styles/Main.css';
 
 const Main = ({ playerName, setPlayerName }) => {
   const [computerPick, setComputerPick] = useState(null);
+  const [computeWinner, setComputeWinner] = useState(false);
   const [gameStart, setGameStart] = useState(true);
   const [inputValue, setInputValue] = useState('');
   const [message, setMessage] = useState('Select Rock, Paper, or Scissors');
@@ -13,6 +14,12 @@ const Main = ({ playerName, setPlayerName }) => {
   const [showGameForm, setShowGameForm] = useState(true);
   const [showGameStatus, setShowGameStatus] = useState(false);
   const [winner, setWinner] = useState('');
+
+  useEffect(() => {
+    if (computeWinner) {
+      gameLogic(playerPick, computerPick);
+    }
+  }, [computeWinner])
 
   const getComputersPick = () => {
     const randomNumber = Math.floor(Math.random() * 3);
@@ -31,9 +38,13 @@ const Main = ({ playerName, setPlayerName }) => {
   }
 
   const gameLogic = (player, computer) => {
+    console.log('Player Pick:', player);
+    console.log('Computer Pick:', computer);
+
     if (player === computer) {
       setWinner('Tie Game!')
       setMessage('No winners, try again!');
+      setComputeWinner(false);
     } 
 
     // Rock
@@ -41,9 +52,11 @@ const Main = ({ playerName, setPlayerName }) => {
       if (computer === 'scissors') {
         setWinner(`${playerName} wins!`);
         setMessage('Rock beats scissors!');
+        setComputeWinner(false);
       } else if (computer === 'paper') {
         setWinner('Computer wins!')
         setMessage('Paper beats rock!');
+        setComputeWinner(false);
       }
     }
 
@@ -52,9 +65,11 @@ const Main = ({ playerName, setPlayerName }) => {
       if (computer === 'rock') {
         setWinner(`${playerName} wins!`);
         setMessage('Paper beats rock!');
+        setComputeWinner(false);
       } else if (computer === 'scissors') {
         setWinner('Computer wins!')
         setMessage('Scissors beats paper!');
+        setComputeWinner(false);
       }
     }
 
@@ -63,9 +78,11 @@ const Main = ({ playerName, setPlayerName }) => {
       if (computer === 'paper') {
         setWinner(`${playerName} wins!`);
         setMessage('Scissors beats paper!');
+        setComputeWinner(false);
       } else if (computer === 'rock') {
         setWinner('Computer wins!')
-        setMessage('Rock beats scissors!')
+        setMessage('Rock beats scissors!');
+        setComputeWinner(false);
       }
     }
   }
@@ -97,14 +114,12 @@ const Main = ({ playerName, setPlayerName }) => {
     if (gameStart) {
       setPlayerPick(event.target.getAttribute('data_value'));
       getComputersPick();
-      gameLogic(playerPick, computerPick);
+      setComputeWinner(true);
     }
   }
 
   return (
     <main>
-      {console.log('Player Pick:', playerPick)}
-      {console.log('Computer Pick:', computerPick)}
       <Gameboard
         gamePieceClick={gamePieceClick}
         handleChange={handleChange}
