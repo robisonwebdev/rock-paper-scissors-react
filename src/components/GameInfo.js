@@ -3,7 +3,7 @@ import GameForm from './GameForm';
 import GameStatus from './GameStatus';
 import '../styles/GameInfo.css';
 
-const GameInfo = ({ handleChange, handleSubmit, inputValue, message, showGameForm, showGameStatus }) => {
+const GameInfo = ({ handleChange, handleSubmit, inputValue, message, showGameForm, showGameStatus, winner }) => {
     return (
         <div className='gameInfo'>
             {showGameForm
@@ -17,6 +17,7 @@ const GameInfo = ({ handleChange, handleSubmit, inputValue, message, showGameFor
             {showGameStatus
                 ?   <GameStatus
                         message={message}
+                        winner={winner}
                     />
                 :   null}
         </div>
