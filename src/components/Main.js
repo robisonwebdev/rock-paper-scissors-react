@@ -103,6 +103,7 @@ const Main = ({ handleScoreUpdate, playerName, setPlayerName }) => {
     setShowGameForm(true);
     setShowGameStatus(false);
     setShowResetBtn(false);
+    setGameStart(false);
   }
 
   const handleSubmit = (event) => {
