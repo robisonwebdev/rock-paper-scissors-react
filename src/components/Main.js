@@ -32,33 +32,40 @@ const Main = ({ playerName, setPlayerName }) => {
 
   const gameLogic = (player, computer) => {
     if (player === computer) {
-      // Return tie
+      setWinner('Tie Game!')
+      setMessage('No winners, try again!');
     } 
 
     // Rock
     if (player === 'rock') {
       if (computer === 'scissors') {
-        // return player wins
+        setWinner(`${playerName} wins!`);
+        setMessage('Rock beats scissors!');
       } else if (computer === 'paper') {
-        // return computer wins
+        setWinner('Computer wins!')
+        setMessage('Paper beats rock!');
       }
     }
 
     // Paper
     if (player === 'paper') {
       if (computer === 'rock') {
-        // return player wins
+        setWinner(`${playerName} wins!`);
+        setMessage('Paper beats rock!');
       } else if (computer === 'scissors') {
-        // return computer wins
+        setWinner('Computer wins!')
+        setMessage('Scissors beats paper!');
       }
     }
 
     // Scissors
     if (player === 'scissors') {
       if (computer === 'paper') {
-        // return player wins
+        setWinner(`${playerName} wins!`);
+        setMessage('Scissors beats paper!');
       } else if (computer === 'rock') {
-        // return computer wins
+        setWinner('Computer wins!')
+        setMessage('Rock beats scissors!')
       }
     }
   }
