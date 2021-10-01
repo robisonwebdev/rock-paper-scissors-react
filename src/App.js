@@ -17,6 +17,11 @@ const App = () => {
     if (update === 'computer') {
       setComputerScore(computerScore + 1);
     }
+
+    if (update === 'reset') {
+      setComputerScore(0)
+      setPlayerScore(0);
+    }
   }
 
   return (
