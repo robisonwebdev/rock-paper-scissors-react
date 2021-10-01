@@ -9,6 +9,16 @@ const App = () => {
   const [playerName, setPlayerName] = useState('');
   const [playerScore, setPlayerScore] = useState(0);
 
+  const handleScoreUpdate = (update) => {
+    if (update === 'player') {
+      setPlayerScore(playerScore + 1);
+    }
+
+    if (update === 'computer') {
+      setComputerScore(computerScore + 1);
+    }
+  }
+
   return (
     <div className='app'>
       <Header
@@ -16,6 +26,7 @@ const App = () => {
         playerScore={playerScore}
       />
       <Main
+        handleScoreUpdate={handleScoreUpdate}
         playerName={playerName}
         setPlayerName={setPlayerName}
       />
