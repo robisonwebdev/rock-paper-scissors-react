@@ -88,12 +88,15 @@ const Main = ({ playerName, setPlayerName }) => {
   const gamePieceClick = (event) => {
     if (gameStart) {
       setPlayerPick(event.target.getAttribute('data_value'));
+      getComputersPick();
+      gameLogic(playerPick, computerPick);
     }
   }
 
   return (
     <main>
       {console.log('Player Pick:', playerPick)}
+      {console.log('Computer Pick:', computerPick)}
       <Gameboard
         gamePieceClick={gamePieceClick}
         handleChange={handleChange}
