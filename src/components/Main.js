@@ -98,6 +98,7 @@ const Main = ({ handleScoreUpdate, playerName, setPlayerName }) => {
   }
 
   const handleReset = () => {
+    handleScoreUpdate('reset');
     setPlayerName('');
     setShowGameForm(true);
     setShowGameStatus(false);
