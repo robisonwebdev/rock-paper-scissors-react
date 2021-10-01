@@ -12,6 +12,7 @@ const Main = ({ playerName, setPlayerName }) => {
   const [showResetBtn, setShowResetBtn] = useState(false);
   const [showGameForm, setShowGameForm] = useState(true);
   const [showGameStatus, setShowGameStatus] = useState(false);
+  const [winner, setWinner] = useState('');
 
   const getComputersPick = () => {
     const randomNumber = Math.floor(Math.random() * 3);
