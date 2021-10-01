@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Gameboard from './Gameboard';
 import Button from './Button';
 import '../styles/Main.css';
@@ -87,12 +87,13 @@ const Main = ({ playerName, setPlayerName }) => {
 
   const gamePieceClick = (event) => {
     if (gameStart) {
-      console.log(event.target.getAttribute('data_value'));
+      setPlayerPick(event.target.getAttribute('data_value'));
     }
   }
 
   return (
     <main>
+      {console.log('Player Pick:', playerPick)}
       <Gameboard
         gamePieceClick={gamePieceClick}
         handleChange={handleChange}
