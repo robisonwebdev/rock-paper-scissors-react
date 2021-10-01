@@ -114,6 +114,7 @@ const Main = ({ playerName, setPlayerName }) => {
         playerName={playerName}
         showGameStatus={showGameStatus}
         showGameForm={showGameForm}
+        winner={winner}
       />
       {showResetBtn
         ? <Button
