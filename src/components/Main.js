@@ -3,7 +3,7 @@ import Gameboard from './Gameboard';
 import Button from './Button';
 import '../styles/Main.css';
 
-const Main = ({ playerName, setPlayerName }) => {
+const Main = ({ handleScoreUpdate, playerName, setPlayerName }) => {
   const [computerPick, setComputerPick] = useState(null);
   const [computeWinner, setComputeWinner] = useState(false);
   const [gameStart, setGameStart] = useState(true);
@@ -53,10 +53,12 @@ const Main = ({ playerName, setPlayerName }) => {
         setWinner(`${playerName} wins!`);
         setMessage('Rock beats scissors!');
         setComputeWinner(false);
+        handleScoreUpdate('player');
       } else if (computer === 'paper') {
         setWinner('Computer wins!')
         setMessage('Paper beats rock!');
         setComputeWinner(false);
+        handleScoreUpdate('computer');
       }
     }
 
@@ -66,10 +68,12 @@ const Main = ({ playerName, setPlayerName }) => {
         setWinner(`${playerName} wins!`);
         setMessage('Paper beats rock!');
         setComputeWinner(false);
+        handleScoreUpdate('player');
       } else if (computer === 'scissors') {
         setWinner('Computer wins!')
         setMessage('Scissors beats paper!');
         setComputeWinner(false);
+        handleScoreUpdate('computer');
       }
     }
 
@@ -79,10 +83,12 @@ const Main = ({ playerName, setPlayerName }) => {
         setWinner(`${playerName} wins!`);
         setMessage('Scissors beats paper!');
         setComputeWinner(false);
+        handleScoreUpdate('player');
       } else if (computer === 'rock') {
         setWinner('Computer wins!')
         setMessage('Rock beats scissors!');
         setComputeWinner(false);
+        handleScoreUpdate('computer');
       }
     }
   }
