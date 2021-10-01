@@ -3,7 +3,7 @@ import GameInterface from './GameInterface';
 import GameInfo from './GameInfo';
 import '../styles/Gameboard.css';
 
-const Gameboard = ({ handleChange, handleSubmit, inputValue, gamePieceClick, message, playerName, showGameForm, showGameStatus }) => {
+const Gameboard = ({ handleChange, handleSubmit, inputValue, gamePieceClick, message, playerName, showGameForm, showGameStatus, winner }) => {
   return (
     <div className='gameboard'>
       <GameInterface
@@ -18,6 +18,7 @@ const Gameboard = ({ handleChange, handleSubmit, inputValue, gamePieceClick, mes
         message={message}
         showGameForm={showGameForm}
         showGameStatus={showGameStatus}
+        winner={winner}
       />
       <GameInterface
         className='Computer'
