@@ -6,7 +6,7 @@ import '../styles/Main.css';
 const Main = ({ handleScoreUpdate, playerName, setPlayerName }) => {
   const [computerPick, setComputerPick] = useState(null);
   const [computeWinner, setComputeWinner] = useState(false);
-  const [gameStart, setGameStart] = useState(true);
+  const [gameStart, setGameStart] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [message, setMessage] = useState('Select Rock, Paper, or Scissors');
   const [playerPick, setPlayerPick] = useState(null);
@@ -110,11 +110,12 @@ const Main = ({ handleScoreUpdate, playerName, setPlayerName }) => {
     event.preventDefault();
 
     if (inputValue !== '') {
-        setPlayerName(inputValue);
-        setShowResetBtn(true);
-        setShowGameForm(false);
-        setShowGameStatus(true);
-        setInputValue('');
+      setGameStart(true);
+      setPlayerName(inputValue);
+      setShowResetBtn(true);
+      setShowGameForm(false);
+      setShowGameStatus(true);
+      setInputValue('');
     }
   }
 
