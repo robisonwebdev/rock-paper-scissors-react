@@ -131,6 +131,7 @@ const Main = ({ handleScoreUpdate, playerName, setPlayerName }) => {
     <main>
       <Gameboard
         gamePieceClick={gamePieceClick}
+        gameStart={gameStart}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         inputValue={inputValue}
