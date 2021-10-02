@@ -4,7 +4,7 @@ import '../styles/GameStatus.css';
 const GameStatus = ({ message, winner }) => {
     return (
         <div className='gameStatus'>
-            <h6>{winner}</h6>
+            <h3>{winner}</h3>
             <p>{message}</p>
         </div>
     );
