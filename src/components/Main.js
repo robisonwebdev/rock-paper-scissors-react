@@ -143,8 +143,10 @@ const Main = ({ handleScoreUpdate, playerName, setPlayerName }) => {
       />
       {showResetBtn
         ? <Button
+            className='resetBtn'
             onClick={handleReset}
             text='Reset Game'
+            type='button'
           />
         : null
       }
