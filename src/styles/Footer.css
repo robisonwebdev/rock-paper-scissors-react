@@ -6,3 +6,7 @@ footer small {
 footer a {
     color: var(--redLight);
 }
+
+footer a:hover {
+    color: var(--red);
+}
