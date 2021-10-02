@@ -8,3 +8,8 @@
 .Computer .la-hand-scissors {
     transform: scaleX(-1);
 }
+
+.iconHover:hover {
+    color: var(--red);
+    cursor: pointer;
+}
