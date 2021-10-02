@@ -3,13 +3,14 @@ import GameInterface from './GameInterface';
 import GameInfo from './GameInfo';
 import '../styles/Gameboard.css';
 
-const Gameboard = ({ handleChange, handleSubmit, inputValue, gamePieceClick, message, playerName, showGameForm, showGameStatus, winner }) => {
+const Gameboard = ({ gamePieceClick, gameStart, handleChange, handleSubmit, inputValue, message, playerName, showGameForm, showGameStatus, winner }) => {
   return (
     <div className='gameboard'>
       <GameInterface
         className='Player'
         competitor={playerName}
         gamePieceClick={gamePieceClick}
+        gameStart={gameStart}
       />
       <GameInfo
         handleChange={handleChange}
