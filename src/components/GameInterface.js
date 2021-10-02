@@ -2,13 +2,34 @@ import React from 'react';
 import GamePiece from './GamePiece';
 import '../styles/GameInterface.css';
 
-const GameInterface = ({ className, competitor, gamePieceClick }) => {
+const GameInterface = ({ className, competitor, gamePieceClick, gameStart }) => {
+  let iconHover;
+
+  if (gameStart) {
+    iconHover = 'iconHover';
+  }
+
   return (
     <div className={`gameInterface ${className}`}>
       <h2>{competitor || className}</h2>
-      <GamePiece data_value='rock' icon='las la-hand-rock' onClick={gamePieceClick} />
-      <GamePiece data_value='paper' icon='las la-hand-paper' onClick={gamePieceClick} />
-      <GamePiece data_value='scissors' icon='las la-hand-scissors' onClick={gamePieceClick} />
+      <GamePiece
+        data_value='rock'
+        className={iconHover}
+        icon='las la-hand-rock'
+        onClick={gamePieceClick}
+      />
+      <GamePiece
+        data_value='paper'
+        className={iconHover}
+        icon='las la-hand-paper'
+        onClick={gamePieceClick}
+      />
+      <GamePiece
+        data_value='scissors'
+        className={iconHover}
+        icon='las la-hand-scissors'
+        onClick={gamePieceClick}
+      />
     </div>
   );
 }
