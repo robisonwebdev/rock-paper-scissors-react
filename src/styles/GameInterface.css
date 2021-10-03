@@ -8,6 +8,16 @@
     width: 25%;
 }
 
+.gamePieces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 100%;
+    width: 100%;
+}
+
 .gameInterface h2 {
     font-size: 3rem;
 }
