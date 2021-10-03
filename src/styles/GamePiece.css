@@ -13,3 +13,9 @@
     color: var(--red);
     cursor: pointer;
 }
+
+@media only screen and (max-width: 985px) {
+    .gamePiece {
+        font-size: 85px;
+    }
+}
