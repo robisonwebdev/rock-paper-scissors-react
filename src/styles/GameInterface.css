@@ -21,3 +21,22 @@
 .gameInterface h2 {
     font-size: 3rem;
 }
+
+@media only screen and (max-width: 985px) {
+    .Computer {
+        flex-direction: column-reverse;
+    }
+
+    .gameInterface {
+        height: 100%;
+        width: 100%;
+    }
+
+    .gameInterface h2 {
+        font-size: 2.5rem;
+    }
+
+    .gamePieces {
+        flex-direction: row;
+    }
+}
